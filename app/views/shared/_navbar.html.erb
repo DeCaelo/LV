@@ -1,0 +1,32 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-hearder">
+      <%= link_to "Mes livres", root_path, class: "navbar-brand" %>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "S'inscrire", new_user_registration_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Connexion", new_user_session_path %></li>
+      <% end %>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+
+    <!-- Search form -->
+    <li class="search">
+    <%= form_tag search_books_path, method: :get, class: "navbar-search", role: "search" do %>
+    <p>
+      <%= text_field_tag :search, params[:search], class: "navbar-search-input" %>
+      <%= submit_tag "Recherche", name: nil, class: "navbar-search-btn" %>
+    </p>
+    <% end %>
+    </li>
+
+      <% if user_signed_in? %>
+        <li><%= link_to "Ajouter un livre", new_book_path, class: "btn btn-medium" %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

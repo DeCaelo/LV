@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag @book.book_img.url(:book_show), class: "book-show"%>
+  </div>
+  <div class="col-md-8">
+
+    <div class="book-info">
+      <h2 class="book-title"><%= @book.title %></h2>
+      <h3 class="book-author border_bottom"><span>De</span> <%= @book.author %></h3>
+      <h4>Lu ou pas: <span class="label label-warning"><%= @book.state %></span></h4>
+      <h4>A qui il appartient: <span class="label label-info"><%= @book.who %></span></h4>
+      <h4>Date de publication: <%= @book.release_date %></h4>
+      <h4>Sortie en poche: <%= @book.release_pocket_date %></h4>
+      <div class="links btn-group ">
+      <%= link_to "Retour", root_path, class: "btn btn-medium" %>
+        <% if user_signed_in? %>
+          <% if @book.user_id == current_user.id %>
+            <%= link_to "Edition", edit_book_path(@book), class: "btn btn-medium" %>
+            <%= link_to "Supprimer", book_path(@book), class: "btn btn-medium", method: :delete, data: { confirm: "Etes-vous sûr de vouloir supprimer le livre ?"} %>
+          <% end %>
+        <% end %>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="reviews">
+      <h1 class="border_bottom">Note &amp; commentaire</h1>
+        <%= render @book.reviews %>
+      <div>
+        <%= link_to "Ajouter note commentaire & résumé", new_book_review_path(@book), class: "btn btn-medium" %>
+      </div>
+    </div>
+  </div>
+</div>
