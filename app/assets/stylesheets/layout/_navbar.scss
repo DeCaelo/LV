@@ -1,0 +1,35 @@
+$whity:#ffffff;
+
+.navbar-default {
+  background:$whity;
+  font-family:$raleway;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+  .navbar-nav > li > a {
+    &:hover {
+      color: orange;
+      transition: 0.5s;
+    }
+  }
+}
+
+.search {
+  padding-right: 70px;
+  padding-top: 10px;
+  font-size: 1em;
+
+  .navbar-search-btn {
+    font-family:$montserrat;
+    text-transform: uppercase;
+    font-weight:bold;
+    background: #ffbf00;
+    border-color: #ffbf00;
+    line-height: 1.1em;
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 7px;
+  }
+}
+

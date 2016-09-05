@@ -1,3 +1,47 @@
-// Place all the styles related to the Books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$dark: #424652;
+$white: #FFFFFF;
+$light: #9a9da4;
+$highlight: #FDB631;
+$border: #E9E9E9;
+
+.pagination:before,
+.pagination:after {
+  content: " ";
+  display: table;
+}
+
+.pagination:after {
+  clear:box;
+}
+
+.pagination {
+  text-align: center;
+  margin: 0 0 3em 0;
+  a, .previous_page, .current, .next_page {
+    padding: .75em 1em;
+    margin: 0 .5em;
+    border-radius: .15em;
+    line-height: 20px;
+    text-decoration: none;
+    background: $white;
+    font-weight: 700;
+    font-size: .7em;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      background: $highlight;
+      color: $white;
+    }
+  }
+  .current {
+    background: $highlight;
+    color: $white;
+  }
+  .disabled {
+    color: #C0C0C0;
+    &:hover {
+      color: #C0C0C0;
+      background: $white;
+    }
+  }
+}
