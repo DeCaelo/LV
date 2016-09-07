@@ -11,23 +11,23 @@ class BooksController < ApplicationController
   end
 
   def index
-      @books = Book.all.order("id ASC").paginate(:page => params[:page], :per_page => 8)
+    @books = Book.all.order("id ASC").paginate(:page => params[:page], :per_page => 8)
   end
 
   def show
   end
 
   def new
-    @book = current_user.books.build
+    @book = Book.new
   end
 
   def create
-    @book = current_user.books.build(book_params)
+    @book = Book.new(book_params)
 
     if @book.save
       redirect_to root_path
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -38,7 +38,7 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       redirect_to book_path(@book)
     else
-      render 'edit'
+      render :edit
     end
   end
 

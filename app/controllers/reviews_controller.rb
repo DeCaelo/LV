@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to book_path(@book)
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -23,12 +23,10 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:id])
-
     if @review.update(review_params)
-      redirect_to book_path(@book)
+      redirect_to book_path
     else
-      render 'edit'
+      render :edit
     end
   end
 

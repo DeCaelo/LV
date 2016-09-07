@@ -1,0 +1,16 @@
+<div class="review">
+<div class="col-md-4">
+  <p class="rating"><%= review.rating %></p>
+  <h4>Commentaire</h4>
+  <p class="review-comment"><%= review.comment %></p>
+  </div>
+  <h4>Résumé</h4>
+  <p class="review-comment resume col-md-8"><%= review.resume %></p>
+
+<% if user_signed_in? %>
+  <div class="links btn-group">
+    <%= link_to "Editer", edit_book_review_path(review.book, review), class: "btn btn-medium" %>
+    <%= link_to "Supprimer", book_review_path(review.book, review), class: "btn btn-medium", method: :delete, data: {confirm: "êtes vous sûr de vouloir supprimer ?"} %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,6 @@
+<%= simple_form_for([@book, @book.reviews.build]) do |f| %>
+  <%= f.input :rating, label: "Votre note sur 10" %>
+  <%= f.input :comment, label: "Commentaire" %>
+  <%= f.input :resume, label: "Résumé" %>
+  <%= f.button :submit, 'Valider', :class => 'btn btn-medium' %>
+<% end %>

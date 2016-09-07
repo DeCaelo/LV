@@ -1,0 +1,12 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="edit-review-form">
+    <h1>Edition de la note, commentaire &amp; résumé</h1>
+    <%= simple_form_for([@book, @review]) do |f| %>
+      <%= f.input :rating %>
+      <%= f.input :comment %>
+      <%= f.input :resume %>
+      <%= f.button :submit, :class => 'btn-custom2' %>
+    <% end %>
+  </div>
+</div>
+
