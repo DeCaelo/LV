@@ -1,15 +1,17 @@
-<h1 class="current-category"><%= params[:category] %></h1>
-
+<% if !user_signed_in? %>
+<div id="banner">
+<h2>Vous devez vous connecter</h2>
+  <%= link_to new_user_session_path, class: " navbar-item navbar-button btn active" do %>
+   <i class="fa fa-envira"> CONNEXION</i>
+<% end %>
+</div>
+ <% else %>
 <%= will_paginate @books %>
-
 <% if @books.count == 0 %>
 <h1>Pas de livre actuellement dans cette catégorie</h1>
 <% else %>
-
   <div class="row">
-
   <% @books.each do |book| %>
-
   <div class="cards col-sm-6 col-md-3">
     <div class="card">
       <div class="card-body">
@@ -17,7 +19,7 @@
       </div>
     </div>
   </div>
-
   <% end %>
-  </div>
+<% end %>
+</div>
 <% end%>

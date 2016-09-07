@@ -6,3 +6,16 @@ h4 {
   font-family: $raleway;
 }
 
+#banner {
+  background-image: image-url('book.jpg');
+  background-color: #536265;
+  color: white;
+  padding: 150px 0;
+  background-size: cover;
+  height: 961px;
+  padding-left: 50px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+

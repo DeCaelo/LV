@@ -14,6 +14,7 @@ gem 'devise', '~> 4.2'
 gem 'paperclip', '~> 5.1'
 gem 'will_paginate', '~> 3.1'
 gem 'searchkick'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
