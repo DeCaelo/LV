@@ -1,5 +1,10 @@
 $whity:#ffffff;
 
+.navbar {
+  margin-bottom:0px;
+}
+
+
 .navbar-default {
   background:$whity;
   font-family:$raleway;
@@ -24,12 +29,16 @@ $whity:#ffffff;
     font-family:$montserrat;
     text-transform: uppercase;
     font-weight:bold;
-    background: #ffbf00;
-    border-color: #ffbf00;
+    background: #ffc928;
+    border-color: #ffc928;
     line-height: 1.1em;
     border-radius: 3px;
     margin: 0 auto;
     padding: 7px;
+
+    &:hover {
+      background: #ffdd7c;
+    }
   }
 }
 
@@ -52,5 +61,9 @@ $whity:#ffffff;
 .navbar-button:hover {
   color: white;
   background: #b36200;
+}
+
+.small {
+  font-size:75%;
 }
 
