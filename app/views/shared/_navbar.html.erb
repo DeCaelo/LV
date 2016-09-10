@@ -15,12 +15,14 @@
     <ul class="nav navbar-nav navbar-right">
 
     <!-- Search form -->
+    <% if user_signed_in? %>
     <li class="search">
     <%= form_tag search_books_path, method: :get, class: "navbar-search", role: "search" do %>
     <p>
       <%= text_field_tag :search, params[:search], class: "navbar-search-input" %>
       <%= submit_tag "Recherche", name: nil, class: "navbar-search-btn small" %>
     </p>
+    <% end %>
     <% end %>
     </li>
 

@@ -1,0 +1,15 @@
+.filter {
+  margin-left:30px;
+  padding-top:10px;
+  border-radius:5px;
+  align-items: center;
+  width: 500px;
+  height: 250px;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  font-size: 3em;
+  -webkit-backdrop-filter: grayscale(1) contrast(3) blur(1px);
+  backdrop-filter: grayscale(1) contrast(3) blur(1px);
+}
