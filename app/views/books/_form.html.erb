@@ -1,5 +1,5 @@
 <%= simple_form_for @book do |f| %>
-  <%= f.file_field :book_img %>
+  <%= f.file_field :book_img, , label: "Image du livre" %>
   <%= f.input :author, label: "Auteur" %>
   <%= f.input :title, label: "Titre" %>
   <%= f.input :state, collection: ["lu", "pas_lu_pas_aimé", "à_lire_acheté", "à_lire_emprunté_biblio", "à_lire_emprunté_caro", "à_lire_non_acheté", "à_reprendre"], label: "Lu ou pas", prompt: "Lu ou à lire" %>
