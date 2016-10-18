@@ -21,6 +21,15 @@ $base-height: 1.4;
 }
 $brandon-light: "BrandonLight";
 
+@font-face {
+  font-family: "BrandonBold";
+  src: font-url('BrandonBold.eot');
+  src: font-url('BrandonBold.eot?#iefix') format('embedded-opentype'),
+       font-url('BrandonBold.woff') format('woff'),
+       font-url('BrandonBold.ttf') format('truetype')
+}
+$brandon-bold: "BrandonBold";
+
 /* -------------------------------------
  * Colors
  * ------------------------------------- */

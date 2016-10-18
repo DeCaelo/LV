@@ -12,6 +12,7 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all.order("id ASC").paginate(:page => params[:page], :per_page => 8)
+    @partial = params[:view] || "index" || "list"
   end
 
   def show

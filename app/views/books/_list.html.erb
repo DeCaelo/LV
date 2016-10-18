@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Liste des livres</h2>
+    <% @books.each do |book| %>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Auteur</th>
+            <th>Titre</th>
+            <th>Lu ou pas</th>
+            <th>Emprunté à qui</th>
+            <th>Date de sortie</th>
+            <th>Date de sortie en poche</th>
+            <th>Voir note, commentaire et résumé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= book.author %></td>
+            <td><%= book.title %></td>
+            <td><%= book.state %></td>
+            <td><%= book.who %></td>
+            <td><%= book.release_date %></td>
+            <td><%= book.release_pocket_date %></td>
+            <td><%= link_to "voir ", book_path(:id => book.id), class: "btn btn-warning" %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
+</div>
+
+
+
+

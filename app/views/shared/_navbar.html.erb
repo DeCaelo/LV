@@ -9,6 +9,8 @@
         <% else %>
         <li><%= link_to "Connexion", new_user_session_path %></li>
       <% end %>
+      <li><%= link_to "Vue liste", root_path(view: "list") %></li>
+      <li><%= link_to "Vue livre", root_path(view: "index") %></li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">

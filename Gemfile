@@ -17,6 +17,12 @@ gem 'searchkick'
 gem 'font-awesome-rails'
 gem 'toastr-rails'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-momentjs'
+  gem 'rails-assets-bootstrap3-datetimepicker'
+  gem 'rails-assets-bootstrap-datepicker'
+end
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end

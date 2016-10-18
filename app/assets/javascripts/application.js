@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require datepicker
+//= require bootstrap3-datetimepicker
+//= require bootstrap-datepicker
 //= require toastr
 //= require turbolinks
 //= require_tree .
