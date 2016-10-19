@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :find_book, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit]
+  before_action :authenticate_user!, only: [:new, :edit, :show]
 
   def search
     if params[:search].present?
